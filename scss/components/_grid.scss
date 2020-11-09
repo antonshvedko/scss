@@ -1,15 +1,8 @@
-// Наш грид на flexbox
-// Количество колонок
 $column: 12;
 
 .grid {
 	display:flex;
 	flex-wrap: wrap;
-	margin: 0 -15px;
-
-	[class*="col-"] {
-		padding: 0 15px;
-	}
 }
 
 @for $i from 1 through $column {
@@ -20,24 +13,24 @@ $column: 12;
 
 @include media ('>=phone', '<tablet') {
 	@for $i from 1 through $column {
-		.col-sm-#{$i} {
-			width: 100% / $column * $i;
+		.col-#{$i} {
+			width: 50% / $column * $i;
 		}
 	}
 }
 
 @include media ('>=tablet', '<desktop') {
 	@for $i from 1 through $column {
-		.col-md-#{$i} {
-			width: 100% / $column * $i;
+		.col-#{$i} {
+			width: 33.33% / $column * $i;			
 		}
 	}
 }
 
 @include media ('>=desktop') {
 	@for $i from 1 through $column {
-		.col-lg-#{$i} {
-			width: 100% / $column * $i;
+		.col-#{$i} {
+			width: 33.33% / $column * $i;
 		}
 	}
 }

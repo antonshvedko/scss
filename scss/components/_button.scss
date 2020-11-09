@@ -8,11 +8,13 @@
 	width: 148px;
 	text-align: center;
 	transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
 	&:hover {
 		color: $gray;
 		background-color: $white;
 		text-decoration: none;
 	}
+	
 	a {
 		max-width: 100%;
 	}
