@@ -3,9 +3,12 @@ $gray: #3a454d;
 $black: #000;
 $white: #fff;
 $dark-gray: #292f36;
+$light-gray: #4e5a62;
+$dark-transparent: rgba(0, 0, 0, 0.5);
 
-$border-white: 2px solid #fff;
-$border-h: 4px solid #4e5a62;
+$border-white: 2px solid $white;
+$border-bottom: 4px solid $light-gray;
+$border-left: 10px solid $light-gray;
 
 $base-font-sans-serif: 'Roboto', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
@@ -31,3 +34,7 @@ $h3-font-size: 24px;
 $h4-font-size: 21px;
 $h5-font-size: 17px;
 $h6-font-size: 15px;
+$btn-font-size: 14px;
+
+$transition-color: color .3s ease-in-out, background-color .3s ease-in-out;
+$transition-opacity: opacity .3s ease-in-out;

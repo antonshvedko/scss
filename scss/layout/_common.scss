@@ -1,4 +1,3 @@
-// пример использования media (breakpoints в верху файла)
 body {
 	@include media(">=tablet") {
 		.main {
@@ -9,16 +8,20 @@ body {
 				margin-bottom: 30px;
 			}
 
+			h2 {
+				font-size: $font-size-base - 4.5;
+			}
+
 			.main-btn {
 				justify-content: center;
 			}
 
 			.grid {
 				margin: -10px -10px 32px;
+			}
 
-				.col-12 {
-					padding: 10px;
-				}
+			.col-12 {
+				padding: 10px;
 			}
 		}
 
@@ -39,6 +42,48 @@ body {
 	}
 
 	@include media(">=desktop") {
+		.main {
+			padding-top: 85px;
+
+			h1{
+				font-size: $h1-font-size + 6;
+				border-left: $border-left;
+				border-bottom: none;
+				padding-left: 15px;
+				padding-bottom: 0;
+			}
+
+			.h {
+				margin-bottom: 62px;
+			}
+
+			.row {
+				margin: -15px -15px 47px;
+			}
+		
+			.col {
+				padding: 15px;
+			}
+
+			.card {
+				h2{
+					font-size: $font-size-base + 2;
+					padding: 20px;
+				}
+				
+				.plus {
+					&::before {
+						width: 20px;
+						height: 4px;
+					}
+	
+					&::after {
+						width: 4px;
+						height: 20px;
+					}
+				}
+			}
+		}	
 	}
 }
 
@@ -48,28 +93,36 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
 
-.h {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 30px;
-}
-
-.main-btn {
-	@extend .h;
-}
-
 .main {
 	padding: 34px 0;
+
+	h1 {
+		margin: 0;
+		padding-bottom: 2px;
+		border-bottom: $border-bottom;
+	}
+
 	.grid {
 		margin: 0 -13px 25px;
+	}
 
-		.col-12 {
-			padding: 13px;
-		}
+	.col-12 {
+		padding: 13px;
+	}
+
+	.h {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	
+	.main-btn {
+		@extend .h;
+		font-size: $btn-font-size;
 	}
 }
