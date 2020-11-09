@@ -1,0 +1,41 @@
+// пример использования media (breakpoints в верху файла)
+body {
+	@include media ('>=tablet') {
+		// background-color: ;
+	}
+
+	@include media ('>=desktop') {
+		// background-color: ;
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.h {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.main-btn {
+	@extend .h;
+}
+
+.main {
+	padding: 34px 0;
+	.row {
+		margin: -13px -13px 25px;
+		.col {
+			padding: 13px;
+		}
+	}
+}

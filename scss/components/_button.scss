@@ -1,0 +1,19 @@
+.btn {
+	display: block;
+	color: $white;
+	border: $border-white;
+	border-radius: 5px;
+	text-transform: uppercase;
+	padding: 10px 6px;
+	width: 148px;
+	text-align: center;
+	transition: color .3s ease-in-out, background-color .3s ease-in-out;
+	&:hover {
+		color: $gray;
+		background-color: $white;
+		text-decoration: none;
+	}
+	a {
+		max-width: 100%;
+	}
+}

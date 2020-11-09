@@ -1,0 +1,56 @@
+%align {
+    @include alignment;
+    content: '';
+}
+
+.card {
+    position: relative;
+
+    .hover-box {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    h2 {
+        background-color: $dark-gray;
+        padding: 17px;
+        margin: 0;
+    }
+
+    &:hover {
+        .hover-box {
+            opacity: 1;
+        }
+    }
+
+    .plus {
+        flex-grow: 1;
+        position: relative;
+    }
+
+    .plus {
+        &::before {
+            width: 17px;
+            height: 3px;
+        }
+
+        &::after {
+            width: 3px;
+            height: 17px;
+        }
+
+        &::before,
+        &::after {
+            @extend %align;
+        }
+    }
+}
