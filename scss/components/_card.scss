@@ -4,7 +4,7 @@
     height: 100%;
 
     .hover-box {
-        background-color: $dark-transparent;
+        background-color: rgba(0, 0, 0, 0.5);
         @include alignment(base, 0, 0);
         width: 100%;
         height: 100%;
@@ -15,10 +15,17 @@
         cursor: pointer;
     }
 
-    h2 {
+    h6 {
         background-color: $dark-gray;
         padding: 17px;
         margin: 0;
+        @include media(">=tablet") {
+            font-size: $h6-font-size - 4.5;
+        }
+
+        @include media(">=desktop") {
+            font-size: $h6-font-size + 2;
+        }
     }
 
     &:hover {
@@ -30,17 +37,32 @@
     .plus {
         flex-grow: 1;
         position: relative;
-    }
-
-    .plus {
         &::before {
             width: 17px;
             height: 3px;
+            @include media(">=tablet") {
+                width: 13px;
+                height: 3px;
+            }
+
+            @include media(">=desktop") {
+                width: 20px;
+                height: 4px;
+            }
         }
 
         &::after {
             width: 3px;
             height: 17px;
+            @include media(">=tablet") {
+                width: 3px;
+                height: 13px;
+            }
+
+            @include media(">=desktop") {
+                width: 4px;
+                height: 20px;
+            }
         }
 
         &::before,
@@ -50,4 +72,3 @@
         }
     }
 }
-
